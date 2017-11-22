@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">
+    <desc></desc>
+    <defs>
+        <filter id="f1" x="0" y="0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+        </filter>
+        <pattern id="memory_card" patternUnits="userSpaceOnUse" width="140" height="100">
+            <image xlink:href="memory_card.jpg" x="0" y="0" width="140" height="100 " />
+        </pattern>
+    </defs>
+    
+    <g alignment-baseline="baseline"></g>
+    <polygon points="50,50 100,50 100,100 50,100 " style="stroke:purple;stroke-width:1;fill:lime;filter:url(#f1)" />
+    <polygon points="200,50 150,100 250,100" style="stroke:purple;stroke-width:1; fill:url(#memory_card)" />
+    <circle cx="350" cy="75" r="25" stroke="black" stroke-width="3" fill="red" />
+    <ellipse cx="500" cy="75" rx="25" ry="50" fill="yellow"  />
+    <ellipse cx="500" cy="75" rx="50" ry="25" style="fill:yellow " />
+    <polyline points="20,200 40,250 60,400"
+        style="fill:none;stroke:black;stroke-width:3" />
+    <text x="0" y="450" fill="red">I love SVG!</text>    
+    
+</svg>
