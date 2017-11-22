@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"
+    preserveAspectRatio="xMinYMax meet"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <desc></desc>
+    <defs>
+        
+        <pattern id="memoryCard" patternUnits="userSpaceOnUse" width="1000" height="1000">
+            <image xlink:href="memoryCard.jpg" x="0" y="0" width="500" height="500" />
+        </pattern>
+        <rect id="cardBack" width="50%" height="50%" style="stroke:black; stroke-width:1; fill:url(#memoryCard)"
+        />
+        <rect id="cardFront" width="50%" height="50%" style="stroke:black; stroke-width:1;"
+        />
+        <circle id="circle" cx="200" cy="200" r="20" stroke="black" stroke-width="3" fill="green"
+        />
+    </defs>
+    
+    <g alignment-baseline="baseline"></g>
+    <use id="cardBack1" xlink:href="#cardBack" x="50" y="50" />
+    
+    <g id="cardFront1" transform="translate(600, 50)"> 
+        <use  xlink:href="#cardFront"  x="0" y="0" />
+        <circle cx= "250" cy="250" r="50" fill="red"/>   
+    </g>
+    
+    <use id="cardBack2" xlink:href="#cardBack" x="1200" y="50" />
+    
+</svg>
