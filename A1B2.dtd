@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT spiel (karten*,spieler*,zustand)>
+<!ELEMENT karten EMPTY>
+<!ATTLIST karten 
+aufgedeckt (yes|no) "no" 
+kartenzustand (offen|geschlossen) "geschlossen"
+id ID #REQUIRED
+>
+<!ELEMENT spieler (gewonnenekarten*,anzahlaufgedeckter)>
+<!ATTLIST spieler name ID #REQUIRED
+ punkte CDATA #REQUIRED>
+<!ELEMENT gewonnenekarten EMPTY>
+<!ATTLIST gewonnenekarten gew IDREF #REQUIRED >
+<!ELEMENT anzahlaufgedeckter (#PCDATA)>
+<!ELEMENT zustand (offene*,geschlossene*,istDran)>
+<!ATTLIST zustand läuftSpiel (yes|no) "yes">
+<!ELEMENT offene EMPTY>
+<!ATTLIST offene off IDREF #REQUIRED >
+<!ELEMENT geschlossene EMPTY>
+<!ATTLIST geschlossene ges IDREF #REQUIRED >
+<!ELEMENT istDran EMPTY>
+<!ATTLIST istDran ist IDREF #REQUIRED >

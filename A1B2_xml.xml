@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE spiel SYSTEM "A1B2.dtd">
+<spiel>
+    <karten aufgedeckt="yes" id="t_1" kartenzustand="offen"/>
+    <karten id="t_2" aufgedeckt="yes" kartenzustand="offen"/>
+    <karten id ="t_3" aufgedeckt="no" kartenzustand="geschlossen"/>
+    <spieler name="p_1" punkte="2">
+        <gewonnenekarten gew="t_1" />
+        <gewonnenekarten gew="t_2"/>
+        <anzahlaufgedeckter>2</anzahlaufgedeckter>
+    </spieler>
+    <spieler name="p_2" punkte="0">
+        <anzahlaufgedeckter>0</anzahlaufgedeckter>
+    </spieler>
+    <zustand läuftSpiel="yes">
+        <offene off="t_1"/>
+        <offene off="t_2"/>
+        <geschlossene ges="t_3"/>
+        <istDran ist="p_2"/>
+    </zustand>
+</spiel>
