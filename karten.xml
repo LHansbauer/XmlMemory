@@ -5,9 +5,9 @@
 <?xml-stylesheet type="text/xsl" href="template.xsl"  ?>
 
 
-<cards>
+<templatesMemory>
     <card>
-        <id>.cardFront1</id>
+        <cardId>14</cardId>
         <x-coordinate>
             100
         </x-coordinate>
@@ -16,13 +16,10 @@
         </y-coordinate>
     </card>
     
-    <card>
-        <id>.cardFront2</id>
-        <x-coordinate>
-            100
-        </x-coordinate>
-        <y-coordinate>
-            500
-        </y-coordinate>
-    </card>
-</cards>
+ 
+    
+    <backgroundTemplate>
+        1
+    </backgroundTemplate>
+
+</templatesMemory>
