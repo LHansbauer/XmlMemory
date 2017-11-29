@@ -12,7 +12,49 @@
         
         media-type="image/svg" />
     
-    <xsl:template match="background-elements">
+    <xsl:template match="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160 " width="100%" height="100%"
+            preserveAspectRatio="xMinYMin meet"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs> 
+              <rect id="menuRectangle"
+                width="{width}"
+                height="{height}"
+                x="{x-coordinate}"
+                y="{y-coordinate}"
+                stroke="black"
+                stroke-width="4"
+                fill="transparent"
+                />
+              <!-- transparent is a valid color -->
+              
+                <rect id="buttonRectangle"
+                    width="15%"
+                    height="10%"
+                    x="{x-coordinate}"
+                    y="{y-coordinate}"
+                    stroke="black"
+                    stroke-width="3"
+                    fill="white"
+                />
+        </defs>
+            <use xlink:href="#menuRectangle" id="menu"></use>
+            <!-- test about the arrangement of the flag -->
+            <xsl:if test="numberOfButtons= 1" >
+            <use  xlink:href="#buttonRectangle" id="button1" x="100" y="100" width="100" ></use>
+            </xsl:if>
+            <xsl:if test="numberOfButtons= 2" >
+                
+                
+                <use  xlink:href="#buttonRectangle" id="button1" x="100" y="100" width="100" ></use>
+                <use  xlink:href="#buttonRectangle" id="button2" x="100" y="450" width="100" ></use>
+            
+            </xsl:if>
+                
+        </svg>
+    </xsl:template>
+    
+    <xsl:template match="background">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160 " width="100%" height="100%" 
             preserveAspectRatio="xMinYMin meet"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -27,7 +69,7 @@
         </svg>
     </xsl:template>
     
-    <xsl:template match="id">
+    <xsl:template match="card">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5500 1000 " width="100%" height="100%" 
             preserveAspectRatio="xMinYMin meet"
             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -195,4 +237,7 @@
             </xsl:attribute>
         </img>
     </xsl:template>
+    
+    <!-- <xsl:attribute name="id"><xsl:value-of select="position()"/></xsl:attribute> -->
+
 </xsl:stylesheet>
