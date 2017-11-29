@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="template.xsl"  ?>
+
+<menus>
+    <menu>
+        <id>
+            1
+        </id>
+        <width>20%</width>
+        <height>60%</height>
+        <x-coordinate>35%</x-coordinate>
+        <y-coordinate>10%</y-coordinate>
+        
+        <numberOfButtons>
+            2
+        </numberOfButtons>
+        <button1Text>1 Player
+        </button1Text>
+      
+    </menu>
+    
+    <menu>
+        <id>
+            2
+        </id>
+        <width>30%</width>
+        <height>60%</height>
+        <x-coordinate>40%</x-coordinate>
+        <y-coordinate>15%</y-coordinate>
+        
+        <numberOfButtons>
+            1
+        </numberOfButtons>
+        <button1Text>1 Player
+        </button1Text>
+        
+    </menu>
+    
+    <menu>
+        <id>
+            2
+        </id>
+        <width>30%</width>
+        <height>60%</height>
+        <x-coordinate>37%</x-coordinate>
+        <y-coordinate>12%</y-coordinate>
+        
+        <numberOfButtons>
+            1
+        </numberOfButtons>
+        <button1Text>1 Player
+        </button1Text>
+        
+    </menu>
+</menus>
