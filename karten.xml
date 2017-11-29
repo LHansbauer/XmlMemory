@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="gameBackground.css"?>
+
+<?xml-stylesheet type="text/xsl" href="template.xsl"  ?>
+
+
+<cards>
+    <card>
+        <id>.cardFront1</id>
+        <x-coordinate>
+            100
+        </x-coordinate>
+        <y-coordinate>
+            100
+        </y-coordinate>
+    </card>
+    
+    <card>
+        <id>.cardFront2</id>
+        <x-coordinate>
+            100
+        </x-coordinate>
+        <y-coordinate>
+            500
+        </y-coordinate>
+    </card>
+   
+
+</cards>
