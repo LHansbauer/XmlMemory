@@ -95,13 +95,189 @@
                 <rect id="horizontalLine" width="166" height="500" y="0"/>
                 <rect id="horizontalLine2" width="100" height="500" y="0"/>
                 
-                <image id="background" width="4000" height="3000" xlink:href="xml_game_background.jpg"/>
-                
+                <image id="background" width="4000" height="3000" xlink:href="Spielfeld_Hintergrund.jpeg"/>
+                <rect id="anzeigename" width="10%" height="40%" x="{x-coordinate}" y="{y-coordinate}" fill="white"/>
+                <rect id="anDerReihe" width="15%" height="15%" x="0" y="83" fill="pink"/>
+                 
             </defs>
             <xsl:if test="backgroundTemplate = 1" >
             <use id="background_game2" xlink:href="#background" x="0" y="0" width="100%" height="100%"></use>
             </xsl:if>
             
+            <!-- an der Reihe -->
+            <xsl:if test="istDran=1">
+                <g id="spieler1dran" transform="translate(0,80)">
+                    <use xlink:href="#anDerReihe"/>
+                    <text font-size="80" font-family="Verdana" x="45" y="185"> Spieler 1 ist dran </text>
+                </g>
+                
+            </xsl:if>
+            
+            <xsl:if test="istDran=2">
+                <g id="spieler1dran" transform="translate(0,80)">
+                    <use xlink:href="#anDerReihe"/>
+                    <text font-size="80" font-family="Verdana" x="45" y="185"> Spieler 2 ist dran </text>
+                </g>
+            </xsl:if>
+            
+            <xsl:if test="istDran=3">
+                <g id="spieler1dran" transform="translate(0,80)">
+                    <use xlink:href="#anDerReihe"/>
+                    <text font-size="80" font-family="Verdana" x="45" y="185"> Spieler 3 ist dran </text>
+                </g>
+            </xsl:if>
+            
+            <xsl:if test="istDran=4">
+                <g id="spieler1dran" transform="translate(0,80)">
+                    <use xlink:href="#anDerReihe"/>
+                    <text font-size="80" font-family="Verdana" x="45" y="185"> Spieler 4 ist dran </text>
+                </g>
+            </xsl:if>
+            
+            
+            
+            <!-- an der Reihe -->
+            
+            <!-- 1Spieler -->
+            <xsl:if test="anzahlspieler = 1">
+                
+                <xsl:for-each select="spieler">
+                
+                    <xsl:if test="id = 1">
+            <g id= "einspieler" transform="translate(400,2200)">
+                <use xlink:href="#anzeigename" fill="white"></use>
+                <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 1 </text>
+                <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+            </g> 
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:if>
+            
+            <!-- 1Spieler -->
+            
+            <!-- 2Spieler -->
+            <xsl:if test="anzahlspieler = 2">
+                
+                <xsl:for-each select="spieler">
+                    <xsl:if test="id = 1">
+                        <g id= "einspieler" transform="translate(400,2200)">
+                        
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 1 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    <xsl:if test="id = 2">
+                        <g id= "zweispieler" transform="translate(1300,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 2 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    
+                </xsl:for-each>
+            </xsl:if>
+            <!-- 2Spieler -->
+            
+            <!-- 3Spieler -->
+            <xsl:if test="anzahlspieler = 3">
+                
+                <xsl:for-each select="spieler">
+                    <xsl:if test="id = 1">
+                        <g id= "einspieler" transform="translate(400,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 1 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    <xsl:if test="id = 2">
+                        <g id= "zweispieler" transform="translate(1300,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 2 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    
+                    <xsl:if test="id = 3">
+                        <g id= "dreispieler" transform="translate(2200,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 3 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    
+                </xsl:for-each>
+            </xsl:if>
+            
+            <!-- 3Spieler -->
+            
+            <!-- 4Spieler -->
+            
+            <xsl:if test="anzahlspieler = 4">
+                
+                <xsl:for-each select="spieler">
+                    <xsl:if test="id = 1">
+                        <g id= "einspieler" transform="translate(400,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 1 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    <xsl:if test="id = 2">
+                        <g id= "zweispieler" transform="translate(1300,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 2 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    
+                    <xsl:if test="id = 3">
+                        <g id= "dreispieler" transform="translate(2200,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 3 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    <xsl:if test="id = 4">
+                        <g id= "vierspieler" transform="translate(3100,2200)">
+                            <use xlink:href="#anzeigename"></use>
+                            <text font-size="100" font-family="Verdana" x="21" y="95"> Spieler 4 </text>
+                            <text font-size="100" font-family="Verdana" x="21" y="200"> <xsl:value-of select="spielername"/> </text>
+                            <text font-size="50" font-family="Verdana" x="21" y= "300" >Punkte <xsl:value-of select="punkte"/> </text>
+                        </g> 
+                    </xsl:if>
+                    
+                </xsl:for-each>
+            </xsl:if>
+            
+            
+            
+            
+            
+            <!-- 4Spieler -->
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                <xsl:for-each select="card">
             <xsl:if test="cardId = 1" >
             <!--  Germany  -->
             <g id="cardFront1" transform="translate({x-coordinate}, {y-coordinate})"> 
@@ -111,9 +287,10 @@
                 <use xlink:href="#verticalLine" y="333" fill="#ffff00"/> 
             </g>
                 </xsl:if>
+                   
             <xsl:if test="cardId = 2" >
             <!--  Netherlands  -->
-            <g id="cardFront2" transform="translate (1200, 50)"> 
+                <g id="cardFront2" transform="translate ({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#ae1c28"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#21468b"/> 
@@ -121,7 +298,7 @@
             </xsl:if>
             <xsl:if test="cardId = 3" >
             <!--  Austria  -->
-            <g id="cardFront3" transform="translate(1800, 50)"> 
+                <g id="cardFront3" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#ed2939"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#ed2939"/> 
@@ -129,7 +306,7 @@
             </xsl:if>
             <xsl:if test="cardId = 4" >
             <!--  Estonia  -->
-            <g id="cardFront4" transform="translate(2400, 50)"> 
+                <g id="cardFront4" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#4891d9"/> 
                 <use xlink:href="#verticalLine" y="166" fill="#000000"/> 
@@ -137,7 +314,7 @@
             </xsl:if>
             <xsl:if test="cardId = 5" >
             <!-- Lithuania   -->
-            <g id="cardFront5" transform="translate(3000, 50)"> 
+                <g id="cardFront5" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#fdb913"/> 
                 <use xlink:href="#verticalLine" y="166" fill="#006a44"/> 
@@ -146,7 +323,7 @@
             </xsl:if>
             <xsl:if test="cardId = 6" >
             <!--  Spain  -->
-            <g id="cardFront6" transform="translate(3600, 50)"> 
+                <g id="cardFront6" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#c60b1e"/> 
                 <use xlink:href="#verticalLine" y="166" fill="#ffc400"/> 
@@ -156,7 +333,7 @@
             </xsl:if>
             <xsl:if test="cardId = 7" >
             <!--  Bulgaria  -->
-            <g id="cardFront7" transform="translate(50, 650)"> 
+                <g id="cardFront7" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="166" fill="#00966e"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#d62612"/> 
@@ -165,7 +342,7 @@
             </xsl:if>
             <xsl:if test="cardId = 8" >
             <!--  Italy  -->
-            <g id="cardFront8" transform="translate(600, 650)"> 
+                <g id="cardFront8" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill=" #009246"/> 
                 <use xlink:href="#horizontalLine" x="333" fill="#ce2b37"/> 
@@ -174,7 +351,7 @@
             </xsl:if>
             <xsl:if test="cardId = 9" >
             <!--  France  -->
-            <g id="cardFront9" transform="translate(1200, 650)"> 
+                <g id="cardFront9" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill=" #002395"/>  
                 <use xlink:href="#horizontalLine" x="333" fill="#ed2939"/> 
@@ -182,7 +359,7 @@
             </xsl:if>
             <xsl:if test="cardId = 10" >
             <!--  Ireland  -->
-            <g id="cardFront10" transform="translate(1800, 650)"> 
+                <g id="cardFront10" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill="#169b62"/> 
                 <use xlink:href="#horizontalLine" x="333" fill="#ff883e"/> 
@@ -190,7 +367,7 @@
             </xsl:if>
             <xsl:if test="cardId = 11" >
             <!--  Belgium  -->
-            <g id="cardFront11" transform="translate(2400, 650)"> 
+                <g id="cardFront11" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill="#000000"/> 
                 <use xlink:href="#horizontalLine" x="166" fill="#fae042"/> 
@@ -199,14 +376,14 @@
             </xsl:if>
             <xsl:if test="cardId = 12" >
             <!--  Poland  -->
-            <g id="cardFront12" transform="translate(3000, 650)"> 
+                <g id="cardFront12" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine2" y="251" fill="#dc143c"/> 
             </g>
             </xsl:if>
             <xsl:if test="cardId = 13" >
             <!--  Ukraine  -->
-            <g id="cardFront13" transform="translate(3600, 650)"> 
+                <g id="cardFront13" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine2" y="0" fill=" #005bbb"/> 
                 <use xlink:href="#verticalLine2" y="251" fill="#ffd500"/> 
@@ -214,7 +391,7 @@
             </xsl:if>
             <xsl:if test="cardId = 14" >
             <!--  Finland  -->
-            <g id="cardFront14" transform="translate(4200, 50)"> 
+                <g id="cardFront14" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine3" y="210" fill="#003580"/> 
                 <use xlink:href="#horizontalLine2" x="120" fill="#003580"/> 
@@ -222,7 +399,7 @@
             </xsl:if>
             <xsl:if test="cardId = 15" >
             <!--  Sweden  -->
-            <g id="cardFront15" transform="translate(4200, 650)" > 
+                <g id="cardFront15" transform="translate({x-coordinate}, {y-coordinate})" > 
                 <use xlink:href="#cardFront"  x="0" y="0"/>
                 <use xlink:href="#filledCard"  x="0" y="0" fill ="#006aa7"/>
                 <use xlink:href="#verticalLine3" y="210" fill=" #fecc00"/> 
@@ -231,7 +408,7 @@
             </xsl:if>
             <xsl:if test="cardId = 16" >
             <!--  Denmark  -->
-            <g id="cardFront16" transform="translate(4800, 50)"> 
+                <g id="cardFront16" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0"/>
                 <use xlink:href="#filledCard"  x="0" y="0" fill=" #c60c30"/>
                 <use xlink:href="#verticalLine3" y="210" fill="#ffffff "/> 
@@ -239,7 +416,7 @@
             </g>
                 
             </xsl:if>
-
+            </xsl:for-each>
         </svg>
     </xsl:template>
     

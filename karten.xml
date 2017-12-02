@@ -6,17 +6,136 @@
 
 
 <templatesMemory>
-    <card>
-        <cardId>14</cardId>
-        <x-coordinate>
+    
+    
+    <anzahlspieler>
+        4
+    </anzahlspieler>
+    <istDran>
+    1
+    </istDran>
+    
+    <spieler>
+        <id>
+            1
+        </id>
+        <spielername>
+            Sylvia
+        </spielername>
+        <punkte>
             100
+        </punkte>
+    </spieler>
+    <spieler>
+        <id>
+            2
+        </id>
+        <spielername>
+            Kevin
+        </spielername>
+        <punkte>
+            200
+        </punkte>
+    </spieler>
+    <spieler>
+        <id>
+            3
+        </id>
+        <spielername>
+            Jenny
+        </spielername>
+        <punkte>
+            250
+        </punkte>
+    </spieler>
+    <spieler>
+        <id>
+            4
+        </id>
+        <spielername>
+            Lorenz
+        </spielername>
+        <punkte>
+            260
+        </punkte>
+    </spieler>
+    
+    
+    
+    
+    
+    <card>
+        <cardId>1</cardId>
+        <x-coordinate>
+            400
         </x-coordinate>
         <y-coordinate>
-            100
+            550
         </y-coordinate>
     </card>
-    
- 
+    <card>
+        <cardId>2</cardId>
+        <x-coordinate>
+            1300
+        </x-coordinate>
+        <y-coordinate>
+            550
+        </y-coordinate>
+    </card>
+    <card>
+        <cardId>3</cardId>
+        <x-coordinate>
+            2200
+        </x-coordinate>
+        <y-coordinate>
+            550
+        </y-coordinate>
+    </card>
+    <card>
+        <cardId>4</cardId>
+        <x-coordinate>
+            3100
+        </x-coordinate>
+        <y-coordinate>
+            550
+        </y-coordinate>
+    </card>
+    <card>
+        <cardId>2</cardId>
+        <x-coordinate>
+            400
+        </x-coordinate>
+        <y-coordinate>
+            1500
+        </y-coordinate>
+    </card>
+    <card>
+        <cardId>3</cardId>
+        <x-coordinate>
+            1300
+        </x-coordinate>
+        <y-coordinate>
+            1500
+        </y-coordinate>
+    </card>
+    <card>
+        <cardId>4</cardId>
+        <x-coordinate>
+            2200
+        </x-coordinate>
+        <y-coordinate>
+            1500
+        </y-coordinate>
+    </card>
+    <card>
+        <cardId>1</cardId>
+        <x-coordinate>
+            3100
+        </x-coordinate>
+        <y-coordinate>
+            1500
+        </y-coordinate>
+    </card>
     
     <backgroundTemplate>
         1
