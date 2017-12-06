@@ -66,6 +66,12 @@
     
     <card>
         <cardId>1</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             400
         </x-coordinate>
@@ -75,6 +81,12 @@
     </card>
     <card>
         <cardId>2</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             1300
         </x-coordinate>
@@ -84,6 +96,12 @@
     </card>
     <card>
         <cardId>3</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             2200
         </x-coordinate>
@@ -93,6 +111,12 @@
     </card>
     <card>
         <cardId>4</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             3100
         </x-coordinate>
@@ -102,6 +126,12 @@
     </card>
     <card>
         <cardId>2</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             400
         </x-coordinate>
@@ -111,6 +141,9 @@
     </card>
     <card>
         <cardId>3</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
         <x-coordinate>
             1300
         </x-coordinate>
@@ -120,6 +153,12 @@
     </card>
     <card>
         <cardId>4</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             2200
         </x-coordinate>
@@ -129,6 +168,12 @@
     </card>
     <card>
         <cardId>1</cardId>
+        <kartenZustand>
+            0
+        </kartenZustand>
+        <ausgewahlt>
+            0
+        </ausgewahlt>
         <x-coordinate>
             3100
         </x-coordinate>

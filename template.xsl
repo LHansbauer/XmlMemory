@@ -280,6 +280,7 @@
                 <xsl:for-each select="card">
             <xsl:if test="cardId = 1" >
             <!--  Germany  -->
+                <xsl:if test="kartenZustand = 1">
             <g id="cardFront1" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#000000"/> 
@@ -287,133 +288,261 @@
                 <use xlink:href="#verticalLine" y="333" fill="#ffff00"/> 
             </g>
                 </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
+                
+                </xsl:if>
                    
             <xsl:if test="cardId = 2" >
             <!--  Netherlands  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront2" transform="translate ({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#ae1c28"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#21468b"/> 
             </g>
+                </xsl:if>
+                
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 3" >
             <!--  Austria  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront3" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#ed2939"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#ed2939"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 4" >
             <!--  Estonia  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront4" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#4891d9"/> 
                 <use xlink:href="#verticalLine" y="166" fill="#000000"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 5" >
             <!-- Lithuania   -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront5" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#fdb913"/> 
                 <use xlink:href="#verticalLine" y="166" fill="#006a44"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#c1272d"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 6" >
             <!--  Spain  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront6" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="0" fill="#c60b1e"/> 
                 <use xlink:href="#verticalLine" y="166" fill="#ffc400"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#c60b1e"/> 
             </g>
-                
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 7" >
             <!--  Bulgaria  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront7" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine" y="166" fill="#00966e"/> 
                 <use xlink:href="#verticalLine" y="333" fill="#d62612"/> 
             </g>
-                
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 8" >
             <!--  Italy  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront8" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill=" #009246"/> 
                 <use xlink:href="#horizontalLine" x="333" fill="#ce2b37"/> 
             </g>
-                
+                </xsl:if>
+               
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 9" >
             <!--  France  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront9" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill=" #002395"/>  
                 <use xlink:href="#horizontalLine" x="333" fill="#ed2939"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 10" >
             <!--  Ireland  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront10" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill="#169b62"/> 
                 <use xlink:href="#horizontalLine" x="333" fill="#ff883e"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 11" >
             <!--  Belgium  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront11" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#horizontalLine" x="0" fill="#000000"/> 
                 <use xlink:href="#horizontalLine" x="166" fill="#fae042"/> 
                 <use xlink:href="#horizontalLine" x="333" fill="#ed2939"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 12" >
             <!--  Poland  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront12" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine2" y="251" fill="#dc143c"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 13" >
             <!--  Ukraine  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront13" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine2" y="0" fill=" #005bbb"/> 
                 <use xlink:href="#verticalLine2" y="251" fill="#ffd500"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 14" >
             <!--  Finland  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront14" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0" />
                 <use xlink:href="#verticalLine3" y="210" fill="#003580"/> 
                 <use xlink:href="#horizontalLine2" x="120" fill="#003580"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 15" >
             <!--  Sweden  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront15" transform="translate({x-coordinate}, {y-coordinate})" > 
                 <use xlink:href="#cardFront"  x="0" y="0"/>
                 <use xlink:href="#filledCard"  x="0" y="0" fill ="#006aa7"/>
                 <use xlink:href="#verticalLine3" y="210" fill=" #fecc00"/> 
                 <use xlink:href="#horizontalLine2" x="120" fill="#fecc00"/> 
+                   
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
             </xsl:if>
             <xsl:if test="cardId = 16" >
             <!--  Denmark  -->
+                <xsl:if test="kartenZustand=1">
                 <g id="cardFront16" transform="translate({x-coordinate}, {y-coordinate})"> 
                 <use xlink:href="#cardFront"  x="0" y="0"/>
                 <use xlink:href="#filledCard"  x="0" y="0" fill=" #c60c30"/>
                 <use xlink:href="#verticalLine3" y="210" fill="#ffffff "/> 
                 <use xlink:href="#horizontalLine2" x="120" fill="#ffffff"/> 
             </g>
+                </xsl:if>
+                <xsl:if test="kartenZustand=0">
+                    <g id="cardBack" transform="translate ({x-coordinate}, {y-coordinate})">
+                        <use xlink:href="#cardBack" x="0" y="0"/>
+                        
+                    </g>
+                </xsl:if>
                 
             </xsl:if>
             </xsl:for-each>
